@@ -81,6 +81,18 @@ async function fetchUsersFromFile(): Promise<User[]>{
     }
 }
 
+apiRouter.get("/users", tokenValidation, async (req: Request, res: Response)=>{
+
+ const data = await fetchUsersFromFile();
+  res.json(data);
+});
+
+apiRouter.get("/settings", tokenValidation, async (req: Request, res: Response)=>{
+ const data = (await fetchUsersFromFile()).filter((user: User)=> user.authenticated === true && user.token === currentToken);
+  res.json(data);
+});
+
+
 // To refresh users.json file data
 const refreshUsersJsonFile =async ()=>{
     try {
