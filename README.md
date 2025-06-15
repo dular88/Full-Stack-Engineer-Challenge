@@ -13,4 +13,7 @@ Middleware : There is one middle to validate the request to validate the token i
 refreshUsersJsonFile function : It is for refeshing data like authenticated and token value whenever server restart.
 
 
+To run application need to start the server : npm run start
+
+
 Full-Stack-Engineer-Challenge Explanation recording link of loom : https://www.loom.com/share/fa179eeb6e714255abe748a5e2480ee5?sid=287ac857-e1a1-41f0-9ad7-9541f7dab5e7
